@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider-aaa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fonts/stylesheet.css">
+</head>
+<body>
+    <!-- how-text-use -->
+    <section class="how-text-use">
+        <div class="content-width">
+           <h2>How text Use <span class="to-display-normal">Lorem ipsum</span></h2>
+           <div class="how-text-slider">
+
+              <div class="slider-part active">
+                 <span></span>
+                 <p class="how-text-use-para"> 1   It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English</p>
+                 <div class="brad-fisher flex-element">
+                    <div class="brand-fisher-man">
+                       <div>
+                          <img src="imge/client_img.png" alt="client_img">
+                       </div>
+                    </div>
+                    <div class="brand-fisher-content">
+                       <h4>Brad Fisher</h4>
+                       <span>Founder & Vice President,</span>
+                       <span>Spring field Mechanical Services</span>
+                    </div>
+                 </div>
+              </div>
+
+              <div class="slider-part">
+                 <span></span>
+              <p class="how-text-use-para"> 2   It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English</p>
+              <div class="brad-fisher flex-element">
+                 <div class="brand-fisher-man">
+                    <div>
+                       <img src="imge/client_img.png" alt="client_img">
+                    </div>
+                 </div>
+                 <div class="brand-fisher-content">
+                    <h4>Brad Fisher</h4>
+                    <span>Founder & Vice President,</span>
+                    <span>Spring field Mechanical Services</span>
+                 </div>
+              </div>
+              </div>
+
+              <div class="slider-part">
+                 <span></span>
+              <p class="how-text-use-para">3   It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English</p>
+              <div class="brad-fisher flex-element">
+                 <div class="brand-fisher-man">
+                    <div>
+                       <img src="imge/client_img.png" alt="client_img">
+                    </div>
+                 </div>
+                 <div class="brand-fisher-content">
+                    <h4>Brad Fisher</h4>
+                    <span>Founder & Vice President,</span>
+                    <span>Spring field Mechanical Services</span>
+                 </div>
+              </div>
+              </div>
+
+              <div class="testimonial-dots">
+                 <span class="dot active" data-slide="0"></span>
+                 <span class="dot" data-slide="1"></span>
+                 <span class="dot" data-slide="2"></span>
+             </div>
+             
+        </div>
+        </div>
+     </section>
+     <!-- how-text-use end -->
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+     <script> 
+        $(function() {
+ let currentIndex = 0;
+ const $slides = $('.slider-part');
+ const $dots = $('.dot');
+ const totalSlides = $slides.length;
+ let slideInterval;
+
+ function showSlide(index) {
+     $slides.fadeOut().eq(index).fadeIn().addClass('active').siblings().removeClass('active');
+     $dots.eq(index).addClass('active').siblings().removeClass('active');
+ }
+
+ function nextSlide() {
+     currentIndex = (currentIndex + 1) % totalSlides;
+     showSlide(currentIndex);
+ }
+
+ function prevSlide() {
+     currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+     showSlide(currentIndex);
+ }
+
+ $('.next').click(nextSlide);
+ $('.prev').click(prevSlide);
+ $dots.click(function() {
+     currentIndex = $(this).data('slide');
+     showSlide(currentIndex);
+ });
+
+ function startSlider() {
+     slideInterval = setInterval(nextSlide, 5000);
+ }
+
+ function stopSlider() {
+     clearInterval(slideInterval);
+ }
+
+ $('.how-text-slider').hover(stopSlider, startSlider);
+
+ showSlide(currentIndex);
+ startSlider();
+});
+   </script>
+
+</body>
+</html>

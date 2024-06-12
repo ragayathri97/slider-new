@@ -1,0 +1,126 @@
+* {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Zoho Puvi';
+}
+
+:root {
+	--dark-pink: #ffece8;
+	--light-pink: #fef6e3;
+	--light-blue: #e8ffe0;
+	--dark-blue: #e0f7ff;
+	--red: #f0483f;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	margin: 0 0 15px;
+    line-height: 1.3;
+}
+p {
+	font-size: 17px;
+	line-height: 1.5;
+	margin: 0 0 20px;
+}
+
+img {
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+	display: inline-block;
+}
+
+.content-width {
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 80px 0;
+}
+
+.flex-element {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+/* slider-code */
+.slider-part{
+    display: none;
+ text-align: center;
+ opacity: 0;
+ transition: opacity 1s;
+ }
+ .slider-part.active{
+    display: block;
+    opacity: 1;
+ }
+ .dot {
+    height: 5px;
+    width: 100px;
+    margin: 0 5px;
+    background-color: #fdd0ce;
+    display: inline-block;
+    cursor: pointer;
+    }
+
+    .dot.active {
+       background-color: #eb605f;
+    }
+    .testimonial-dots{
+       text-align: center;
+       margin-top: 60px;
+    }
+    /* slider-code end */
+
+    /* how-text-use */
+.brad-fisher {
+	max-width: 360px;
+	margin: 40px auto 0;
+}
+
+.brand-fisher-man {
+	width: 25%;
+}
+
+.brand-fisher-content {
+	width: 75%;
+	text-align: left;
+}
+
+.brand-fisher-man img {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	padding: 5px;
+	border: 1px solid red;
+}
+
+.brand-fisher-content h4 {
+	color: red;
+	font-weight: 500;
+	font-size: 16px;
+}
+
+.brand-fisher-content span {
+	display: block;
+	font-size: 15px;
+	opacity: 0.4;
+}
+.slider-part.active{
+	max-width: 750px;
+	margin: 0 auto;
+}
+
+.how-text-use h2{
+text-align: center;
+	margin: 0 0 30px;
+}
+/* how-text-use end */
+
